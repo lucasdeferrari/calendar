@@ -1,0 +1,66 @@
+#header-calendario {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+#titulo-calendario {
+  text-align: center;
+  grid-column: span 3;
+}
+
+#prev-month {
+  align-self: right;
+}
+
+.btn-nav-month {
+  width: 40px; /* Establecer un ancho fijo para los botones */
+  height: 30px; /* Establecer una altura fija para los botones */
+  grid-column: span 1;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-nav-month:hover {
+  background-color: lightgray;
+}
+
+#weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  background-color: #e3f2fd;
+  padding: 10px 0;
+}
+
+/* Esto es para los hijos de #weekdays: */
+#weekdays div {
+  padding: 5px;
+}
+
+#days {
+  display: grid;
+  aspect-ratio: 1.8;
+  grid-template-columns: repeat(7, 1fr); /* 7 columnas iguales */
+  gap: 5px;
+  min-height: 5vh;
+}
+#days div {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  background-color: white; /* Días normales */
+}
+#days .inactive {
+  background-color: #f0f0f0; /* Color para los días vacíos */
+  color: #ccc; /* Texto más claro */
+}
+
+body {
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
